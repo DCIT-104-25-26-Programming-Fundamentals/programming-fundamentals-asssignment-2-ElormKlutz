@@ -57,3 +57,121 @@
 #include <iostream>
 using namespace std;
 
+
+
+
+
+
+
+
+
+
+void printTable(int number) {
+
+    cout << "Multiplication Table for " << number << ":" << endl;
+
+    for (int i = 1; i <= 12; i++) {
+
+        cout << number << " x " << i << " = " << number * i << endl;
+
+
+    }
+
+}
+
+
+
+void printTablesUpToN(int n) {
+
+    for (int number = 1; number <= n; number++) {
+
+        cout << "Multiplication Table for " << number << ":" << endl;
+
+        for (int i = 1; i <= 12; i++) {
+
+            cout << number << " x " << i << " = " << number * i << endl;
+
+        }
+
+        cout << "---------------------------" << endl;
+
+    }
+
+}
+
+
+
+int main() {
+
+    int choice;
+
+    cout << "===== MULTIPLICATION TABLE GENERATOR =====" << endl;
+    cout << "1. Single Multiplication Table" << endl;
+    cout << "2. Tables from 1 to N" << endl;
+    cout << "3. Exit" << endl;
+    cout << "Choose an option: ";
+    cin >> choice;
+
+
+    if (choice == 1) {
+
+        int number;
+
+        cout << "Enter a number: ";
+        cin >> number;
+
+        if (number <= 0) {
+
+            cout << "Error: Number must be a positive integer." << endl;
+
+        }
+
+        else {
+
+            printTable(number);
+
+
+        }
+
+    }
+
+
+    else if (choice == 2) {
+
+        int n;
+
+        cout << "Enter N: ";
+        cin >> n;
+
+        if (n <= 0) {
+
+            cout << "Error: Number must be a positive integer." << endl;
+
+        }
+
+        else {
+
+            printTablesUpToN(n);
+
+        }
+
+    }
+
+
+    else if (choice == 3) {
+
+        cout << "Program ended." << endl;
+
+    }
+
+
+    else {
+
+        cout << "Invalid option." << endl;
+
+    }
+
+
+    return 0;
+
+}
